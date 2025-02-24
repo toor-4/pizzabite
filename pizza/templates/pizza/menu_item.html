@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+<!--  -->
+{% load static %}
+<!--  -->
+{% block title %}MenuItem{% endblock %}
+<!--  -->
+{% block content %}
+<!--  -->
+<div class="p-6 -mt-2">
+  <h2 class="text-5xl">Menu Item</h2>
+  <div>
+    <div class="p-4">
+      <a href="{% url 'index' %}">Home &nbsp;&nbsp;|</a>
+      <a class="px-1" href="{% url 'menu' %}">Menu</a>
+      <div>
+        <h2 class="border-l-8 border-red-800 mt-2 pl-2 text-2xl font-bold">{{ menu_item.name }}</h2>
+        <p class="border-l-8 border-red-800 -mb-2 pl-2 text-2xl font-bold text-red-400">${{ menu_item.price }}.00</p>
+      </div>
+    </div>
+  </div>
+  <p class="p-4 -ml-1 text-gray-500">{{ menu_item.description }}</p>
+
+</div>
+
+<div class="pl-8 -mt-6">
+  <img class="w-full max-w-md h-auto object-cover rounded-md" src="{% static 'pizza/' %}{{ menu_item.name }}.jpg" />
+</div>
+</div>
+</div>
+{% endblock %}

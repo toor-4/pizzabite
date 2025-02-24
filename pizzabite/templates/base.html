@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}pizzabite{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <img class="relative w-full object-cover lg:h-58" src="{% static 'pizza/site-background.png' %}"
+        alt="{{ item.name }}" />
+    {% include 'partials/_header.html' %}
+    <div>{% block content %}{% endblock %}</div>
+    {% include 'partials/_footer.html' %}
+</body>
+
+</html>

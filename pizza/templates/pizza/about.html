@@ -1,14 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+<!--  -->
+{% load static %}
+<!--  -->
+{% block title %}About{% endblock %}
+<!--  -->
+{% block content %}
+<!--  -->
+<div class="p-4">
+    <div class="grid  lg:grid-cols-2 `">
+        <div class="p-4 text-gray-500 text-sm">
+            <h2 class="pb-4 text-5xl -mt-4 text-gray-800">About Us</h2>
+            <div class="`">
+                <p>
+                    Welcome to Bella Citrus, where the art of pizza-making is elevated to
+                    new heights, blending the best of Mediterranean flavors with the
+                    freshest ingredients, creating a culinary experience that is truly
+                    unforgettable.
+                <p>
+                    Tucked away in the bustling heart of Chicago, Bella Citrus shines bright
+                    as a beacon of authentic pizza craftsmanship—a haven where tradition
+                    meets innovation, offering a delightful fusion of timeless flavors with
+                    a modern twist.
+                </p>
+                <p>
+                    Inspired by the rich culinary heritage of Italy, Greece, and Turkey, our
+                    skilled pizza artisans craft a diverse menu of 12-15 seasonal pies that
+                    tantalize the taste buds and ignite the senses.
+                </p>
+                <p>
+                    Stepping into Bella Citrus, guests are enveloped in a cozy ambiance
+                    radiating with warmth and charm, providing a welcoming sanctuary where
+                    pizza lovers can relish in affordable luxury, making it the ultimate
+                    destination for culinary escapades, any time of day.
+                </p>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
-</head>
+                <p>
+                    At the helm of this culinary journey are two passionate siblings from
+                    Italy—Enzo and Luca—whose shared vision and dedication have brought
+                    Bella Citrus to life, showcasing their love for pizza on American soil.
+                </p>
 
-<body>
-    <h1>About Page</h1>
-</body>
+                <p>
+                    Leading the charge in crafting culinary masterpieces is Enzo, drawing
+                    inspiration from cherished family recipes and his extensive experience
+                    in the kitchens of Italy.
+                </p>
 
-</html>
+                <p>
+                    Complementing the culinary artistry, Luca spearheads the marketing
+                    efforts, championing a mission to expand the pizza horizon beyond
+                    traditional Italian fare, embracing a broader Mediterranean palette to
+                    delight pizza enthusiasts far and wide.
+                </p>
+            </div>
+        </div>
+        <div>
+            <figure>
+                <p>
+                    <img class="mt-0 p-1 sm:grid-cols-1 border-1 border-gray-400 shadow-md bg-gray-100 rounded-lg min-h-[100px]"
+                        src="{% static 'pizza/john-n-jane.jpg' %}" alt="Enzo and Luca" />
+                <figcaption class="text-gray-500 ml-4 mt-2">
+                    Enzo and Luca.
+                    </p>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+{% endblock %}
