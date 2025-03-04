@@ -9,12 +9,12 @@
 <div class="p-6 -mt-2 ">
     <div>
         <h2 class="text-5xl">Menu</h2>
-        <div class="p-4 -mt-4">
+        <div class="p-4 -mt-4 sm:text-5xl md:text-2xl">
             {% for item in menu %}
             <a href="{% url 'menu_item' pk=item.pk %}">
-                <p class="text-lg font-bold mt-4 underline uppercase">{{ item.name }}</p>
+                <p class="font-bold mt-6 mb-4 underline uppercase">{{ item.name }}</p>
             </a>
-            <p class="text-gray-500">{{ item.description }}</p>
+            <p class="text-3xl leading-20 mb-4 text-gray-500">{{ item.description }}</p>
             {% endfor %}
         </div>
     </div>
