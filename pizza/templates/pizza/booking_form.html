@@ -5,44 +5,35 @@
 {% block title %}Booking{% endblock %}
 <!--  -->
 {% block content %}
-<!--  -->
-<div class="mt-5 max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
-    <h1 class="flex justify-center text-center text-5xl mb-6">Booking Form</h1>
-    {% if success_message %}
-    <p class=" bg-green-100 text-green-700 p-4 rounded mb-6">{{ success_message }}</p>
-    {% endif %}
-    <form class="border-2 border-gray-500 p-4" action="" method="post">
+<!-- <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md"> -->
+<h2 class=" flex justify-center text-center text-5xl text-gray-500 mb-6 mt-6">Booking a Table</h2>
+{% if success_message %}
+<p class=" bg-green-100 text-center text-green-700 text-3xl p-4 rounded mb-6">{{ success_message }}</p>
+{% endif %}
+<div class="book-form">
+    <form class="book-field" action="" method="post">
         {% csrf_token %}
-        <div class="space-y-2">
-            {% for field in form %}
-            <div class="border border-gray-400 p-2 rounded">
-                {{ field.label_tag }}
-                {{ field }}
-                {% if field.errors %}
-                <div class="text-red-500 text-sm">
-                    {{ field.errors }}
+        {% for field in form %}
+        <div>
+            {{ field.label_tag }}
+            <div class="text-red-700 text-2xl form-input">
+                {{ field.help_text }}
+                <div>
+                    {{ field }}
+                    {% if field.errors %}
+                    <div class="text-red-500 text-3xl mt-1">
+                        {{ field.errors }}
+                    </div>
+                    {% endif %}
                 </div>
-                {% endif %}
             </div>
-            {% endfor %}
+
         </div>
+        {% endfor %}
         <div class="flex justify-center mt-6">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none"
-                type="submit">
-                Submit
-            </button>
+            <button type="submit"
+                class="bg-blue-500 text-white px-4 py-2 rounded rounded-lg hover:bg-blue-700 text-3xl">Submit</button>
         </div>
     </form>
-
-    {% if errors %}
-    <div class="mt-6 bg-red-100 text-red-700 p-4 rounded">
-        <h2 class="font-bold">Form Errors:</h2>
-        <ul class="list-disc list-inside">
-            {% for field, error_list in errors.items %}
-            <li>{{ field }}: {{ error_list|join:", " }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endif %}
 </div>
 {% endblock %}

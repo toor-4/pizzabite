@@ -8,31 +8,29 @@
 <!--  -->
 <div class="p-6 -mt-2">
     <h2 class="text-3xl font-semibold">
-        <span class="uppercase tracking-wider">Come Visit Us! </span>
+        <span class="uppercase text-gray-500 tracking-wider">Come Visit Us! </span>
     </h2>
-    <ul class="ml-6 mt-1 text-sm text-gray-500">
+    <ul class="come-txt text-gray-500">
         <li>Mon - Fri: 2pm - 10pm</li>
         <li>Sat: 2pm - 11pm</li>
         <li>Sun: 2pm - 9pm</li>
     </ul>
 </div>
 
-<div class="bg-purple-200 px-28 py-10 -mb-6 ">
+<div class="bg-gray-100 px-28 py-10 -mb-6 ">
     <!-- sm: 640  md: 768  lg:1024  xl: 1280  2xl: 1536 -->
     <div class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 ">
         {% for item in menu %}
 
+        <div class="border border-gray-300 shadow-md bg-white p-2 rounded-lg max-h-[200px] relative ">
+            <img class="w-full h-48 object-cover rounded-md cursor-pointer menu-image" <img class="menu-image"
+                src="{% static 'pizza/'|add:item.name|add:'.jpg' %}" alt="{{ item.name }}" />
 
-
-        <div class="opacity-90 border border-gray-300 shadow-md bg-white p-2 rounded-lg max-h-[100px] relative ">
-            <img class="w-full h-48 object-cover rounded-md hover:opacity-80 cursor-pointer"
-            src="{% static 'pizza/'|add:item.name|add:'.jpg' %}" alt="{{ item.name }}" />
-
-                   <div class="flex justify-evenly p-2 mt-2 text-sm text-gray-500 font-semibold">
+            <div class="menu-item-name flex justify-evenly p-2 mt-2 text-3xl text-gray-500 font-semibold">
                 <span>{{ item.name }}</span>
             </div>
             <div>
-                <span class="absolute top-0 -left-2 ml-2 text-white text-lg p-3 rounded-md bg-green-600">
+                <span class="absolute top-0 -left-2 ml-2 text-white text-3xl p-3 rounded-md bg-green-600">
                     ${{ item.price }}</span>
             </div>
         </div>
