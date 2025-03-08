@@ -1,0 +1,65 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+}
+
+/* index.html */
+
+.menu-image {
+  opacity: 0.7;
+  transition: 0.5s ease;
+}
+
+.menu-image:hover {
+  opacity: 1;
+  transform: scale(1.05) rotate(-3deg);
+}
+
+.menu-item-name {
+  border: 1px solid rgb(197, 195, 195);
+}
+
+.come-txt {
+  font-size: 18px;
+}
+
+/* booking_form.html */
+
+#id_name,
+#id_email,
+#id_phone,
+#id_date,
+#id_time {
+  font-size: 28px;
+  width: auto;
+  background-color: rgba(255, 255, 0, 0.2);
+}
+
+label {
+  font-size: 28px;
+}
+
+.book-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-field {
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+/* footer */
+
+footer {
+  background-color: #5f5d5d;
+  color: white;
+  /* text-align: center; */
+  font-size: 18px;
+  padding: 10px 30px;
+  margin-top: 10px;
+}
