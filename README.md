@@ -2,6 +2,36 @@
 
 Pizzabite is a Django-based web application for a fictional pizza restaurant called Bella Citrus. The application allows users to view the menu, book a table, and learn more about the restaurant.
 
+## Project Structure
+
+```
+pizzabite/
+├── manage.py
+├── pizzabite/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+├── apps/
+│   ├── orders/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── tests.py
+│   │   └── views.py
+│   └── ...
+├── static/
+│   ├── css/
+│   └── js/
+├── templates/
+│   ├── base.html
+│   └── ...
+├── requirements.txt
+└── checks.yml
+```
+
 ## Features
 
 - **Home Page**: Displays the restaurant's operating hours and a list of menu items.
@@ -54,14 +84,6 @@ Pizzabite is a Django-based web application for a fictional pizza restaurant cal
 
 6. **Access the application**:
    Open your web browser and go to `http://127.0.0.1:8000`.
-
-## Project Structure
-
-- [pizza](http://_vscodecontentref_/0): Contains the main application code including models, views, forms, and templates.
-- [pizzabite](http://_vscodecontentref_/1): Contains project-level settings and URLs.
-- [theme](http://_vscodecontentref_/2): Contains Tailwind CSS configuration and static files.
-- `static/`: Contains static files such as CSS and JavaScript.
-- `templates/`: Contains HTML templates for the application.
 
 ## License
 
