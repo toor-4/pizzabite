@@ -4,8 +4,11 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>{% block title %}pizzabite{% endblock %}</title>
+
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
     {% tailwind_css %}
 </head>
 
@@ -17,6 +20,7 @@
     <div>{% block content %}{% endblock %}</div>
     {% include 'partials/_footer.html' %}
     <script src="{% static 'js/script.js' %}"></script>
+
 </body>
 
 </html>

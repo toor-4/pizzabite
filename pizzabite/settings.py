@@ -155,6 +155,7 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
+
 # STORAGES = {
 
 #     # Media file (image) management   
@@ -167,3 +168,4 @@ INTERNAL_IPS = [
 #         "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
 #     },
 # }
+
