@@ -10,18 +10,18 @@
 {% if success_message %}
 <p class=" bg-green-100 text-center text-green-700 text-3xl p-4 rounded mb-6">{{ success_message }}</p>
 {% endif %}
-<div class="book-form">
+<div class="book-form text-gray-500">
     <form class="book-field" action="" method="post">
         {% csrf_token %}
         {% for field in form %}
         <div>
-            {{ field.label_tag }}
-            <div class="text-red-700 text-2xl form-input">
+            <div class="sm:text-3xl md:text-2xl mt-5">{{ field.label_tag }}</div>
+            <div class="text-gray-500  form-input">
                 {{ field.help_text }}
                 <div>
                     {{ field }}
                     {% if field.errors %}
-                    <div class="text-red-500 text-3xl mt-1">
+                    <div class="text-red-500  mt-1">
                         {{ field.errors }}
                     </div>
                     {% endif %}
@@ -32,7 +32,7 @@
         {% endfor %}
         <div class="flex justify-center mt-6">
             <button type="submit"
-                class="bg-blue-500 text-white px-4 py-2 rounded rounded-lg hover:bg-blue-700 text-3xl">Submit</button>
+                class="bg-blue-500 text-white px-4 py-2 rounded rounded-lg hover:bg-blue-700 sm:text-3xl md:text-2xl">Submit</button>
         </div>
     </form>
 </div>
