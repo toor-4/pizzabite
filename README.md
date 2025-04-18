@@ -2,6 +2,8 @@
 
 Pizzabite is a Django-based web application for a fictional pizza restaurant called Bella Citrus. The application allows users to view the menu, book a table, and learn more about the restaurant.
 
+Visit site: https://alfredd.pythonanywhere.com/
+
 ## Project Structure
 
 ```
