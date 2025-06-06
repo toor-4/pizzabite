@@ -1,0 +1,2 @@
+EMAIL_HOST NOT RELATED TO AWS CONFIGURATION. 
+Literally using frealchar12@gmail.com to test the feature.
